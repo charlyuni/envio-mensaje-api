@@ -1,0 +1,18 @@
+{
+  "name": "tutorial-leifer",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tsm ./src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bot-whatsapp/bot": "0.1.3-alpha.9",
+    "@bot-whatsapp/provider-baileys": "0.1.3-alpha.9"
+  }
+}
