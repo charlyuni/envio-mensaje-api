@@ -8,7 +8,7 @@
       "exec_mode": "cluster",
       "instances": 1,
       "cron_restart": "59 23 * * *",
-      "interpreter": "ts-node",
+      "interpreter": "node",
       "env": {
         "NODE_ENV": "development"
       },
