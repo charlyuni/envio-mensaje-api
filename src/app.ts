@@ -16,14 +16,16 @@ const main = async () => {
 
   provider.initHttpServer(3002);
 
-  provider.http.server.post(
-    "/send-message",
-    handleCtx(async (bot, req, res) => {
-      const { number, message, mediaURL } = req.body;
-      await bot.sendMessage(number, message, { media: mediaURL });
-      res.end("Mensaje enviado");
-    })
-  );
+  if (provider.http) {
+    provider.http.server.post(
+      "/send-message",
+      handleCtx(async (bot, req, res) => {
+        const { number, message, mediaURL } = req.body;
+        await bot.sendMessage(number, message, { media: mediaURL });
+        res.end("Mensaje enviado");
+      })
+    );
+  }
   await createBot({
     flow: createFlow([flowBienvenida]),
     database: new MemoryDB(),
