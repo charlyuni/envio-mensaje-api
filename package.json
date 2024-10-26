@@ -2,7 +2,7 @@
   "name": "tutorial-leifer",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+  "type": "commonjs", 
   "main": "index.js",
   "scripts": {
     "dev": "npx tsm ./src/app.ts",
