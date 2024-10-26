@@ -1,7 +1,7 @@
 {
     "type": "module",
     "scripts": {
-      "dev": "npx tsm -r ./src/app.ts",
+      "dev": "npx tsm -r ./src/app.js",
       "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
