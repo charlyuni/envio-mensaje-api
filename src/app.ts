@@ -1,12 +1,8 @@
-import {
-  addKeyword,
-  createBot,
-  createFlow,
-  createProvider,
-} from "@bot-whatsapp/bot";
+import { addKeyword, createBot, createFlow, createProvider } from "@bot-whatsapp/bot";
 import { MessagesCollection, getMongoAdapter } from "./db/dbConfig";
 import { BaileysProvider, handleCtx } from "@bot-whatsapp/provider-baileys";
 import cron from "node-cron";
+
 
 const flowBienvenida = addKeyword("hola").addAnswer(
   "¡Hola! ¿En qué puedo ayudarte?"

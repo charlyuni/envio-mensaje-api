@@ -1,6 +1,5 @@
 {
-  "include": ["**/*"],
-  "type": "module",
+  "include": ["src/**/*"],
   "scripts": {
     "dev": "npx tsm -r ./src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +12,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "outDir": "./dist"  
   },
   "keywords": [],
   "author": "",
