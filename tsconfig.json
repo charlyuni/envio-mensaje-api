@@ -10,7 +10,7 @@
     "module": "commonjs",
     "lib": ["es2015", "dom"],
     "esModuleInterop": true,
-    "skipLibCheck": true, // Esto ignora problemas en definiciones de módulos de terceros
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": false

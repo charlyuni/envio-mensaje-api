@@ -1,10 +1,10 @@
 import {
-  MemoryDB,
   addKeyword,
   createBot,
   createFlow,
   createProvider,
 } from "@bot-whatsapp/bot";
+import getMongoAdapter from "./db/dbConfig";
 import { BaileysProvider, handleCtx } from "@bot-whatsapp/provider-baileys";
 
 const flowBienvenida = addKeyword("hola").addAnswer(
@@ -26,9 +26,12 @@ const main = async () => {
       })
     );
   }
+
+  const adapterDB = getMongoAdapter();
+
   await createBot({
     flow: createFlow([flowBienvenida]),
-    database: new MemoryDB(),
+    database: adapterDB,
     provider,
   });
 };
